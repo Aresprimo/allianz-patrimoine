@@ -391,7 +391,8 @@ h1, h2, h3, h4 {
 .hero-slider { position: relative; }
 .hero-slide {
   position: absolute; inset: 0;
-  display: flex; align-items: center;
+  display: flex; align-items: flex-start;      /* haut : sinon le titre passe sous le header fixe */
+  padding: clamp(6.5rem, 13vh, 9rem) 0 clamp(3.5rem, 7vh, 5rem);
   opacity: 0; visibility: hidden;
   transition: opacity 0.9s ease, visibility 0.9s ease;
   z-index: 0;
