@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allianz Patrimoine — Conseil patrimonial & assurance vie</title>
+  <meta name="description" content="Cabinet de conseil patrimonial indépendant : protéger, développer et transmettre votre patrimoine. Prévoyance des indépendants de santé, épargne, assurance emprunteur, SCPI." />
+
+  <!-- Preconnect Google Fonts pour la perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css?v=9" />
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- HEADER — sticky translucide qui devient solide au scroll       -->
+  <!-- ============================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo" aria-label="Allianz Patrimoine, accueil">
+        <img class="logo-img" src="assets/img/allianz-logo-charbon.svg" alt="Allianz" width="120" height="30" />
+        <span class="logo-sub">Patrimoine</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#services">Épargne</a>
+        <a href="#services">Prévoyance santé</a>
+        <a href="#services">Assurance emprunteur</a>
+        <a href="#services">SCPI</a>
+        <a href="#services">Associations</a>
+        <a href="#apropos">À propos</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary btn-sm header-cta">Prendre rendez-vous</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile déroulant -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+      <a href="#services">Épargne</a>
+      <a href="#services">Prévoyance santé</a>
+      <a href="#services">Assurance emprunteur</a>
+      <a href="#services">SCPI</a>
+      <a href="#services">Associations</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact" class="btn btn-primary">Prendre rendez-vous</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================================================= -->
+    <!-- HERO — éditorial clair, mot-clé animé                          -->
+    <!-- ============================================================= -->
+    <section class="hero has-video hero-slider" id="accueil" data-hero-slider>
+
+      <!-- Slide 1 : vidéo + accroche patrimoine -->
+      <div class="hero-slide is-active">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/video/video-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Conseil patrimonial sur mesure</p>
+            <h1 class="hero-title">
+              Protéger, développer et transmettre votre
+              <span class="rotator" aria-live="polite">
+                <span class="rotator-word is-active">patrimoine</span>
+                <span class="rotator-word">avenir</span>
+                <span class="rotator-word">transmission</span>
+              </span>
+            </h1>
+            <p class="hero-lead">
+              Un accompagnement indépendant et personnalisé pour les chefs d'entreprise,
+              professions libérales et professionnels de santé. Nous plaçons le conseil
+              avant les produits.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Demander une étude</a>
+              <a href="#contact" class="btn btn-outline">Être rappelé</a>
+            </div>
+            <p class="hero-reassure">
+              <span>26 ans d'expérience</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>Approche indépendante</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>Partout en France</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 : image + prévoyance des professionnels de santé -->
+      <div class="hero-slide">
+        <img class="hero-bg-video" src="assets/img/hero-img.png" alt="" aria-hidden="true" />
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="badge-prio">Cible prioritaire</span>Professionnels de santé</p>
+            <h2 class="hero-title">
+              Des solutions de prévoyance pour les
+              <span class="accent-or">professionnels de santé</span>
+            </h2>
+            <p class="hero-lead">
+              Protégez vos revenus en cas d'arrêt de travail ou d'invalidité — en
+              partenariat avec Allianz et l'UNIM, une prévoyance primée Label d'excellence
+              depuis 10 ans.
+            </p>
+            <div class="hero-actions">
+              <a href="#prevoyance" class="btn btn-primary">Découvrir la prévoyance santé</a>
+              <a href="#contact" class="btn btn-outline">Protéger mes revenus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Points de navigation -->
+      <div class="hero-dots" role="tablist" aria-label="Diapositives du hero">
+        <button type="button" class="hero-dot is-active" aria-label="Diapositive 1 : patrimoine"></button>
+        <button type="button" class="hero-dot" aria-label="Diapositive 2 : prévoyance santé"></button>
+      </div>
+
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SERVICES — cartes empilées sticky (pièce maîtresse)            -->
+    <!-- ============================================================= -->
+    <section class="services" id="services">
+      <div class="container services-head">
+        <p class="eyebrow">Nos expertises</p>
+        <h2 class="section-title">Répondre à chacun de vos besoins</h2>
+        <p class="section-lead">
+          Six domaines d'accompagnement, une même exigence : des solutions
+          construites autour de votre situation, jamais l'inverse.
+        </p>
+      </div>
+
+      <!-- Conteneur des cartes empilées. Chaque .stack-card est sticky. -->
+      <div class="stack" id="stack">
+
+        <!-- 01 — Prévoyance des indépendants de santé (cible prioritaire) -->
+        <article class="stack-card card-cream" data-card="1">
+          <div class="stack-card-inner">
+            <div class="stack-text">
+              <span class="stack-num">01</span>
+              <h3 class="stack-title">Prévoyance des indépendants de santé</h3>
+              <p class="stack-desc">
+                Kinésithérapeutes, infirmiers libéraux, pharmaciens : votre revenu
+                repose sur votre capacité à exercer. Nous protégeons cette ressource
+                essentielle, invalidité comprise, selon les conditions du contrat.
+              </p>
+              <ul class="stack-list">
+                <li><span class="tick" aria-hidden="true"></span>Maintien du revenu en cas d'arrêt de travail</li>
+                <li><span class="tick" aria-hidden="true"></span>Couverture invalidité adaptée à votre métier</li>
+                <li><span class="tick" aria-hidden="true"></span>Garanties ajustées selon les conditions du contrat</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm">Étudier ma prévoyance</a>
+            </div>
+            <div class="stack-media">
+              <img src="assets/img/card-prevoyance.jpg"
+                   alt="Professionnel de santé libéral au travail" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 — Épargne financière -->
+        <article class="stack-card card-beige" data-card="2">
+          <div class="stack-card-inner">
+            <div class="stack-text">
+              <span class="stack-num">02</span>
+              <h3 class="stack-title">Épargne financière</h3>
+              <p class="stack-desc">
+                Assurance vie, capitalisation, contrat luxembourgeois : nous
+                structurons votre épargne avec des supports Clean Share, pour une
+                allocation lisible, diversifiée et alignée sur vos objectifs.
+              </p>
+              <ul class="stack-list">
+                <li><span class="tick" aria-hidden="true"></span>Assurance vie &amp; capitalisation sur mesure</li>
+                <li><span class="tick" aria-hidden="true"></span>Contrat luxembourgeois pour les patrimoines importants</li>
+                <li><span class="tick" aria-hidden="true"></span>Supports Clean Share, sans rétrocession cachée</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm">Structurer mon épargne</a>
+            </div>
+            <div class="stack-media">
+              <img src="assets/img/card-epargne.jpg"
+                   alt="Analyse d'une allocation d'épargne sur documents financiers" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 — Assurance emprunteur -->
+        <article class="stack-card card-white" data-card="3">
+          <div class="stack-card-inner">
+            <div class="stack-text">
+              <span class="stack-num">03</span>
+              <h3 class="stack-title">Assurance emprunteur</h3>
+              <p class="stack-desc">
+                Le coût de l'assurance de prêt pèse lourd sur un crédit immobilier.
+                Nous comparons et renégocions votre contrat pour réduire cette
+                dépense, à garanties au moins équivalentes.
+              </p>
+              <ul class="stack-list">
+                <li><span class="tick" aria-hidden="true"></span>Réduction du coût de l'assurance de prêt</li>
+                <li><span class="tick" aria-hidden="true"></span>Garanties équivalentes exigées par la banque</li>
+                <li><span class="tick" aria-hidden="true"></span>Démarche de substitution accompagnée de bout en bout</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm">Comparer mon assurance</a>
+            </div>
+            <div class="stack-media">
+              <img src="assets/img/card-emprunteur.jpg"
+                   alt="Remise de clés lors d'un achat immobilier" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 — SCPI (teinte bleu nuit) -->
+        <article class="stack-card card-navy" data-card="4">
+          <div class="stack-card-inner">
+            <div class="stack-text">
+              <span class="stack-num">04</span>
+              <h3 class="stack-title">SCPI &amp; immobilier de rendement</h3>
+              <p class="stack-desc">
+                Diversifiez votre patrimoine avec des parts de SCPI, sans les
+                contraintes de la gestion en direct. Un placement de long terme
+                dont le capital et les revenus ne sont pas garantis.
+              </p>
+              <ul class="stack-list">
+                <li><span class="tick" aria-hidden="true"></span>Diversification immobilière mutualisée</li>
+                <li><span class="tick" aria-hidden="true"></span>Sélection de sociétés de gestion reconnues</li>
+                <li><span class="tick" aria-hidden="true"></span>Horizon long terme — capital et revenus non garantis</li>
+              </ul>
+              <a href="#contact" class="btn btn-light btn-sm">Découvrir les SCPI</a>
+            </div>
+            <div class="stack-media">
+              <img src="assets/img/card-scpi.jpg"
+                   alt="Immeubles tertiaires modernes" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 05 — Associations & fédérations -->
+        <article class="stack-card card-green" data-card="5">
+          <div class="stack-card-inner">
+            <div class="stack-text">
+              <span class="stack-num">05</span>
+              <h3 class="stack-title">Associations &amp; fédérations</h3>
+              <p class="stack-desc">
+                La trésorerie d'une association mérite la même rigueur qu'un
+                patrimoine privé. Nous vous aidons à la gérer, la sécuriser et la
+                valoriser dans un cadre adapté au monde associatif.
+              </p>
+              <ul class="stack-list">
+                <li><span class="tick" aria-hidden="true"></span>Gestion et protection de la trésorerie</li>
+                <li><span class="tick" aria-hidden="true"></span>Placements adaptés au cadre associatif</li>
+                <li><span class="tick" aria-hidden="true"></span>Reporting clair pour vos instances</li>
+              </ul>
+              <a href="#contact" class="btn btn-light btn-sm">Accompagner mon association</a>
+            </div>
+            <div class="stack-media">
+              <img src="assets/img/card-associations.jpg"
+                   alt="Réunion d'un bureau associatif" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 06 — Optimisation patrimoniale -->
+        <article class="stack-card card-cream" data-card="6">
+          <div class="stack-card-inner">
+            <div class="stack-text">
+              <span class="stack-num">06</span>
+              <h3 class="stack-title">Optimisation patrimoniale</h3>
+              <p class="stack-desc">
+                Cession d'entreprise, fusion-acquisition, transmission familiale :
+                les moments charnières exigent une stratégie globale. Nous
+                anticipons avec vos experts la meilleure structuration.
+              </p>
+              <ul class="stack-list">
+                <li><span class="tick" aria-hidden="true"></span>Préparation de la cession ou de la transmission</li>
+                <li><span class="tick" aria-hidden="true"></span>Coordination avec votre expert-comptable et votre avocat</li>
+                <li><span class="tick" aria-hidden="true"></span>Stratégie patrimoniale globale et pérenne</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm">Préparer ma transmission</a>
+            </div>
+            <div class="stack-media">
+              <img src="assets/img/card-optimisation.jpg"
+                   alt="Poignée de main lors d'une transmission d'entreprise" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PRÉVOYANCE DES INDÉPENDANTS DE SANTÉ — cible prioritaire        -->
+    <!-- ============================================================= -->
+    <section class="prevoyance" id="prevoyance" aria-labelledby="prevoyance-title">
+      <div class="container prevoyance-grid">
+        <div class="prevoyance-copy reveal">
+          <p class="eyebrow"><span class="badge-prio">Cible prioritaire</span>Professionnels de santé</p>
+          <h2 class="section-title" id="prevoyance-title">La meilleure prévoyance pour les professionnels de santé</h2>
+          <p class="section-lead">
+            Médecins, dentistes, pharmaciens, vétérinaires, paramédicaux : votre régime
+            obligatoire ne suffit pas à couvrir la perte de revenus en cas d'arrêt de travail
+            ou d'invalidité. En partenariat avec Allianz, l'UNIM propose une prévoyance sur
+            mesure, primée <strong>Label d'excellence depuis 10 ans</strong> — parmi les
+            meilleures offres du marché.
+          </p>
+          <ul class="prevoyance-list">
+            <li>Indemnités journalières en cas d'arrêt de travail — sans franchise en cas d'agression</li>
+            <li>Rente d'invalidité dès 10 %, évaluée sur votre capacité à exercer votre profession</li>
+            <li>Capital et rentes (conjoint, éducation) pour protéger vos proches</li>
+            <li>Garantie « frais professionnels » pour les charges fixes de votre cabinet</li>
+            <li>Contrats éligibles à la fiscalité Madelin (cotisations déductibles)</li>
+          </ul>
+          <div class="prevoyance-partners">
+            <span class="prevoyance-partners-label">Associations partenaires d'Allianz</span>
+            <img src="assets/img/unim-logo.svg" alt="UNIM — prévoyance des professionnels de santé" loading="lazy" />
+            <img src="assets/img/uniced-logo.png" alt="UNICED — prévoyance des professionnels du chiffre et du droit" loading="lazy" />
+          </div>
+          <a href="#contact" class="btn btn-primary">Protéger mes revenus</a>
+        </div>
+        <div class="prevoyance-media reveal">
+          <img src="assets/img/prevoyance-sante.jpg"
+               alt="Professionnel de santé libéral en consultation" loading="lazy" />
+          <div class="prevoyance-media-badge">
+            <span class="prevoyance-media-badge-num">Label d'excellence</span>
+            <span class="prevoyance-media-badge-label">10 ans · parmi les meilleures offres du marché (Dossiers de l'Épargne)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- APPROCHE / MISSION                                             -->
+    <!-- ============================================================= -->
+    <section class="approach" id="apropos">
+      <div class="container approach-grid-3">
+        <div class="approach-side approach-side-left reveal">
+          <img src="assets/img/women.png"
+               alt="Conseillère Allianz Patrimoine" loading="lazy" />
+        </div>
+        <div class="approach-copy-center reveal">
+          <p class="eyebrow">Notre philosophie</p>
+          <h2 class="section-title">Une approche centrée sur le conseil, pas sur les produits</h2>
+          <p class="section-lead">
+            Notre
+            indépendance nous permet de sélectionner, parmi le marché, ce qui sert
+            réellement vos intérêts — aujourd'hui et pour la génération suivante.
+          </p>
+          <p class="approach-note">
+            Chaque recommandation est expliquée, chiffrée et remise dans la durée.
+            La relation prime sur la transaction.
+          </p>
+          <a href="#contact" class="btn btn-outline">Découvrir notre démarche</a>
+        </div>
+        <div class="approach-side approach-side-right reveal">
+          <img src="assets/img/men.png"
+               alt="Conseiller Allianz Patrimoine" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CHIFFRES-CLÉS — count-up au scroll                             -->
+    <!-- ============================================================= -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <span class="stat-num" data-count="26" data-suffix=" ans">0</span>
+          <span class="stat-label">d'expérience bancaire &amp; patrimoniale</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-count="86" data-suffix=" M€">0</span>
+          <span class="stat-label">d'encours accompagnés</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-value"><span class="stat-num" data-count="13" data-suffix="">0</span><span class="stat-unit">régions</span></span>
+          <span class="stat-label">une présence partout en France</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-count="100" data-suffix=" %">0</span>
+          <span class="stat-label">indépendance de conseil, sans lien de vente imposé</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- MÉTHODE — 4 étapes numérotées                                  -->
+    <!-- ============================================================= -->
+    <section class="method">
+      <div class="container">
+        <div class="method-head reveal">
+          <p class="eyebrow">Notre méthode</p>
+          <h2 class="section-title">Quatre étapes, une seule ambition : la vôtre</h2>
+        </div>
+        <!-- Timeline : ligne dorée qui se dessine au scroll (JS), reliant les 4 étapes -->
+        <div class="method-timeline">
+          <span class="method-line" aria-hidden="true"><span class="method-line-fill"></span></span>
+
+          <ol class="method-steps">
+            <li class="method-step reveal">
+              <span class="method-icon" aria-hidden="true">
+                <!-- Écoute : bulle de conversation -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </span>
+              <span class="method-num">01</span>
+              <h3>Écoute</h3>
+              <p>Comprendre votre situation, vos projets et vos priorités, sans a priori.</p>
+            </li>
+            <li class="method-step reveal">
+              <span class="method-icon" aria-hidden="true">
+                <!-- Analyse : loupe -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </span>
+              <span class="method-num">02</span>
+              <h3>Analyse</h3>
+              <p>Établir un diagnostic patrimonial complet et objectif de votre situation.</p>
+            </li>
+            <li class="method-step reveal">
+              <span class="method-icon" aria-hidden="true">
+                <!-- Solutions sur mesure : ampoule -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6"/><path d="M10 22h4"/>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/>
+                </svg>
+              </span>
+              <span class="method-num">03</span>
+              <h3>Solutions sur mesure</h3>
+              <p>Construire des recommandations claires, chiffrées et adaptées à vos objectifs.</p>
+            </li>
+            <li class="method-step reveal">
+              <span class="method-icon" aria-hidden="true">
+                <!-- Accompagnement : poignée de main -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+                  <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+                  <path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/>
+                </svg>
+              </span>
+              <span class="method-num">04</span>
+              <h3>Accompagnement</h3>
+              <p>Suivre, ajuster et faire évoluer votre stratégie dans la durée.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CIBLES                                                         -->
+    <!-- ============================================================= -->
+    <section class="targets">
+      <div class="container">
+        <div class="method-head reveal">
+          <p class="eyebrow">À qui nous nous adressons</p>
+          <h2 class="section-title">Des accompagnements pensés pour votre profil</h2>
+        </div>
+        <!-- Slider auto multi-cartes (desktop ~3, tablette ~2, mobile ~1,2).
+             Même mécanique que le slider témoignages. prefers-reduced-motion
+             -> pas d'auto-défilement (défilement manuel/statique accessible). -->
+        <div class="slider slider-cards reveal" id="targetsSlider"
+             data-slider data-autoplay="5500" data-per-view="3"
+             aria-roledescription="carrousel" aria-label="Profils accompagnés">
+          <button class="slider-arrow slider-prev" type="button" aria-label="Profil précédent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+
+          <div class="slider-viewport">
+            <div class="slider-track">
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="1 sur 4">
+                <div class="target-media">
+                  <img src="assets/img/cible-chefs.jpg"
+                       alt="Chef d'entreprise en réunion" loading="lazy" />
+                </div>
+                <div class="target-body">
+                  <h3>Chefs d'entreprise</h3>
+                  <p>Structurer votre rémunération, préparer la cession et la transmission.</p>
+                </div>
+              </article>
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="2 sur 4">
+                <div class="target-media">
+                  <img src="assets/img/cible-liberales.jpg"
+                       alt="Professionnel libéral au bureau" loading="lazy" />
+                </div>
+                <div class="target-body">
+                  <h3>Professions libérales</h3>
+                  <p>Concilier développement de l'activité et constitution d'un patrimoine.</p>
+                </div>
+              </article>
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="3 sur 4">
+                <div class="target-media">
+                  <img src="assets/img/cible-sante.jpg"
+                       alt="Professionnelle de santé indépendante" loading="lazy" />
+                </div>
+                <div class="target-body">
+                  <h3>Indépendants de santé</h3>
+                  <p>Protéger votre revenu et sécuriser votre avenir professionnel.</p>
+                </div>
+              </article>
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="4 sur 4">
+                <div class="target-media">
+                  <img src="assets/img/cible-associations.jpg"
+                       alt="Membres d'une association réunis" loading="lazy" />
+                </div>
+                <div class="target-body">
+                  <h3>Associations</h3>
+                  <p>Gérer et valoriser une trésorerie dans un cadre maîtrisé.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button class="slider-arrow slider-next" type="button" aria-label="Profil suivant">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div class="slider-dots" role="tablist" aria-label="Sélection du profil"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- TÉMOIGNAGES                                                    -->
+    <!-- ============================================================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="method-head reveal">
+          <p class="eyebrow">Ils nous font confiance</p>
+          <h2 class="section-title">La relation avant la transaction</h2>
+        </div>
+        <!-- Slider auto (défilement ~5s, pause au survol, dots + flèches).
+             prefers-reduced-motion -> pas d'auto-défilement (fallback statique). -->
+        <div class="slider reveal" id="testimonialSlider" data-slider data-autoplay="5000" data-per-view="1" aria-roledescription="carrousel" aria-label="Témoignages clients">
+          <button class="slider-arrow slider-prev" type="button" aria-label="Témoignage précédent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+
+          <div class="slider-viewport">
+            <div class="slider-track">
+              <figure class="testimonial" role="group" aria-roledescription="diapositive" aria-label="1 sur 3">
+                <span class="testimonial-quote" aria-hidden="true">&#8220;</span>
+                <div class="stars" role="img" aria-label="Note : 5 sur 5">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <blockquote>
+                  Un interlocuteur qui prend le temps de comprendre avant de proposer.
+                  Mon patrimoine professionnel est enfin lisible.
+                </blockquote>
+                <figcaption>
+                  <span class="avatar" aria-hidden="true">CM</span>
+                  <span class="who"><strong>Dr. C. M.</strong><span>Chirurgien-dentiste libéral</span></span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial" role="group" aria-roledescription="diapositive" aria-label="2 sur 3">
+                <span class="testimonial-quote" aria-hidden="true">&#8220;</span>
+                <div class="stars" role="img" aria-label="Note : 5 sur 5">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <blockquote>
+                  L'étude de prévoyance a mis en évidence des zones que j'ignorais.
+                  Aujourd'hui, mon revenu est protégé sereinement.
+                </blockquote>
+                <figcaption>
+                  <span class="avatar" aria-hidden="true">LR</span>
+                  <span class="who"><strong>M. L. R.</strong><span>Kinésithérapeute</span></span>
+                </figcaption>
+              </figure>
+
+              <figure class="testimonial" role="group" aria-roledescription="diapositive" aria-label="3 sur 3">
+                <span class="testimonial-quote" aria-hidden="true">&#8220;</span>
+                <div class="stars" role="img" aria-label="Note : 5 sur 5">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <blockquote>
+                  Une vraie indépendance de conseil. On sent que l'intérêt du client
+                  passe avant tout le reste.
+                </blockquote>
+                <figcaption>
+                  <span class="avatar" aria-hidden="true">AD</span>
+                  <span class="who"><strong>Mme A. D.</strong><span>Dirigeante de PME</span></span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <button class="slider-arrow slider-next" type="button" aria-label="Témoignage suivant">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div class="slider-dots" role="tablist" aria-label="Sélection du témoignage"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PARTENAIRES                                                    -->
+    <!-- ============================================================= -->
+    <section class="partners">
+      <div class="container partners-inner reveal">
+        <div class="partners-copy">
+          <p class="eyebrow">Mieux ensemble</p>
+          <h2 class="section-title">Un réseau d'experts au service de vos clients</h2>
+          <p class="section-lead">
+            Experts-comptables, avocats, courtiers immobiliers et conseillers
+            d'entreprise : nous travaillons main dans la main pour offrir un conseil
+            patrimonial complet et coordonné.
+          </p>
+          <a href="#contact" class="btn btn-primary">Devenir partenaire</a>
+        </div>
+        <ul class="partners-list">
+          <li>Experts-comptables</li>
+          <li>Avocats</li>
+          <li>Courtiers immobiliers</li>
+          <li>Conseillers d'entreprise</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- FAQ                                                            -->
+    <!-- ============================================================= -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-inner">
+        <div class="faq-head reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 class="section-title" id="faq-title">Vos questions, nos réponses</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Le premier rendez-vous est-il payant ?</summary>
+            <div class="faq-answer"><p>Non. Le premier échange est gratuit et sans engagement : on fait le point sur votre situation et vos objectifs, puis on vous explique clairement comment nous pouvons vous accompagner.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Intervenez-vous partout en France ?</summary>
+            <div class="faq-answer"><p>Oui. Nous nous déplaçons partout en France pour vous rencontrer, et nous pouvons aussi échanger en visioconférence si vous le préférez.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Que signifie votre « approche indépendante » ?</summary>
+            <div class="faq-answer"><p>Nous ne sommes pas tenus de vendre un produit en particulier. Nous sélectionnons, parmi le marché, les solutions qui servent réellement vos intérêts — avec une attention forte portée à la transparence des frais.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Je suis professionnel de santé : que couvre la prévoyance ?</summary>
+            <div class="faq-answer"><p>La protection de votre revenu en cas d'arrêt de travail ou d'invalidité, avec des garanties adaptées à votre métier (kinésithérapeute, infirmier, pharmacien…), en partenariat avec les associations UNIM et UNICED. Les cotisations sont déductibles au titre de la loi Madelin, selon les conditions du contrat.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Puis-je changer mon assurance emprunteur pour payer moins cher ?</summary>
+            <div class="faq-answer"><p>Oui. La loi vous permet de changer d'assurance de prêt à tout moment, à garanties au moins équivalentes. Nous comparons les offres et gérons la substitution de bout en bout.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Les SCPI comportent-elles des risques ?</summary>
+            <div class="faq-answer"><p>Oui. Il s'agit d'un placement de long terme : le capital et les revenus ne sont pas garantis. Nous vous accompagnons dans le choix des supports en fonction de votre profil et de vos objectifs.</p></div>
+          </details>
+        </div>
+        <p class="faq-cta">Une autre question ? <a href="#contact">Contactez-nous</a> ou appelez le <a href="tel:+33638229839">+33&nbsp;6&nbsp;38&nbsp;22&nbsp;98&nbsp;39</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CTA FINAL                                                      -->
+    <!-- ============================================================= -->
+    <section class="cta" id="contact">
+      <div class="container cta-inner reveal">
+        <p class="eyebrow eyebrow-light">Prenons contact</p>
+        <h2 class="cta-title">Un conseil patrimonial fondé sur l'écoute et l'exigence</h2>
+        <p class="cta-lead">
+          Le premier échange est sans engagement. Parlons de vos objectifs et
+          voyons ensemble comment protéger, développer et transmettre ce que vous
+          construisez.
+        </p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Prendre rendez-vous</a>
+          <a href="tel:+33638229839" class="btn btn-light btn-lg">Être rappelé</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PARTENAIRES — bande de logos (au-dessus du footer)             -->
+    <!-- ============================================================= -->
+    <section class="partner-logos reveal" aria-labelledby="partner-logos-title">
+      <div class="container">
+        <p class="eyebrow" id="partner-logos-title">En partenariat avec</p>
+        <div class="partner-logos-row">
+          <img src="assets/img/unim-logo.svg" alt="UNIM" loading="lazy" />
+          <img src="assets/img/uniced-logo.png" alt="UNICED" loading="lazy" />
+        </div>
+        <p class="partner-logos-note">
+          Nos solutions de prévoyance des indépendants de santé sont développées
+          en partenariat avec les associations UNIM et UNICED.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER — bleu nuit + accents or                                -->
+  <!-- ============================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#accueil" class="logo logo-light" aria-label="Allianz Patrimoine, accueil">
+          <img class="logo-img" src="assets/img/allianz-logo-creme.svg" alt="Allianz" width="120" height="30" />
+          <span class="logo-sub">Patrimoine</span>
+        </a>
+        <p class="footer-tagline">
+          Allianz Patrimoine &amp; Protection Sociale — Cattoen &amp; Papin, Douai.
+          Protéger, développer et transmettre votre patrimoine, partout en France.
+        </p>
+        <p class="footer-contact">
+          <a href="tel:+33638229839">+33 6 38 22 98 39</a><br />
+          100 Rue Pierre Dubois, 59500 Douai
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Expertises">
+        <h4>Expertises</h4>
+        <a href="#services">Prévoyance santé</a>
+        <a href="#services">Épargne financière</a>
+        <a href="#services">Assurance emprunteur</a>
+        <a href="#services">SCPI</a>
+        <a href="#services">Associations</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Cabinet">
+        <h4>Cabinet</h4>
+        <a href="#apropos">À propos</a>
+        <a href="#partners">Partenaires</a>
+        <a href="#contact">Contact</a>
+        <a href="#services">Optimisation patrimoniale</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Nous joindre</h4>
+        <p>100 Rue Pierre Dubois<br />59500 Douai</p>
+        <p><a href="tel:+33638229839">+33 6 38 22 98 39</a></p>
+        <p>Intervention : France entière</p>
+        <a href="#contact" class="btn btn-light btn-sm">Prendre rendez-vous</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Allianz Patrimoine. Tous droits réservés.</p>
+      <nav class="footer-legal" aria-label="Mentions légales">
+        <a href="#">Mentions légales</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">ORIAS</a>
+        <a href="#">RGPD</a>
+      </nav>
+      <p class="footer-disclaimer">
+        Les informations présentées ont une vocation d'information générale et ne
+        constituent pas un conseil personnalisé. Les performances passées ne
+        préjugent pas des performances futures. Pour les SCPI, le capital et les
+        revenus ne sont pas garantis. Les garanties de prévoyance s'appliquent
+        selon les conditions du contrat.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Libs via CDN : Lenis (smooth scroll) + GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Carrousel du hero : slide 1 = vidéo (bascule à la fin), slide 2 = même durée que la vidéo -->
+  <script>
+    (function () {
+      const hero = document.querySelector("[data-hero-slider]");
+      if (!hero) return;
+      const slides = Array.from(hero.querySelectorAll(".hero-slide"));
+      const dots = Array.from(hero.querySelectorAll(".hero-dot"));
+      if (slides.length < 2) return;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const video = slides[0].querySelector("video");
+      const FALLBACK = 7000; // durée par défaut si la vidéo n'expose pas sa durée
+      let i = 0, timer = null, vdur = 0;
+      if (video) {
+        video.removeAttribute("loop"); // pour que l'événement 'ended' se déclenche
+        if (isFinite(video.duration) && video.duration > 0) vdur = video.duration * 1000;
+        video.addEventListener("loadedmetadata", () => { vdur = video.duration * 1000; }, { once: true });
+        video.addEventListener("ended", () => { if (i === 0) show(1); }); // fin vidéo -> slide 2
+      }
+      const slideTime = () => (vdur > 0 ? vdur : FALLBACK);
+      function clear() { if (timer) { clearTimeout(timer); timer = null; } }
+      function show(n) {
+        clear();
+        i = (n + slides.length) % slides.length;
+        slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
+        dots.forEach((d, k) => d.classList.toggle("is-active", k === i));
+        if (reduce) return;
+        if (i === 0) {
+          // Slide 1 : (re)lance la vidéo depuis le début ; bascule au slide 2 à la fin ('ended')
+          if (video) {
+            try { video.currentTime = 0; video.play(); } catch (e) {}
+            // filet de sécurité si 'ended' ne se déclenche pas (ex. autoplay bloqué)
+            timer = setTimeout(() => show(1), (vdur > 0 ? vdur : 60000) + 1500);
+          } else {
+            timer = setTimeout(() => show(1), FALLBACK);
+          }
+        } else {
+          // Slide 2 : affiché la MÊME durée que la vidéo, puis retour au slide 1
+          if (video) { try { video.pause(); } catch (e) {} }
+          timer = setTimeout(() => show(0), slideTime());
+        }
+      }
+      dots.forEach((d, k) => d.addEventListener("click", () => show(k)));
+      show(0);
+    })();
+  </script>
+</body>
+</html>
