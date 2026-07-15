@@ -1278,3 +1278,81 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 /* Section-head aligné à gauche (variante) */
 .section-head.is-left { margin-inline: 0; text-align: left; }
 .section-head.is-left .section-lead { margin-inline: 0; }
+
+/* =================================================================
+   Cartes DIAGNOSTIC — feature cards premium (composant dédié,
+   n'affecte pas le .info-card global des autres sections/pages)
+   ================================================================= */
+.diag-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: clamp(2rem, 4vw, 2.8rem);
+  align-items: stretch;               /* hauteurs de cartes égales */
+}
+.diag-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  background: var(--blanc);
+  border: 1px solid var(--filet);
+  border-radius: 20px;
+  padding: 1.9rem 1.7rem;
+  box-shadow: 0 1px 2px rgba(42,46,44,0.04), 0 14px 32px -24px rgba(42,46,44,0.32);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  overflow: hidden;
+}
+/* filet d'accent qui se révèle en haut au survol */
+.diag-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--or), var(--or-clair));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s ease;
+}
+.diag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 2px 6px rgba(42,46,44,0.05), 0 28px 52px -26px rgba(42,46,44,0.40);
+  border-color: rgba(184,139,119,0.55);
+}
+.diag-card:hover::before { transform: scaleX(1); }
+
+.diag-top { display: flex; align-items: center; justify-content: space-between; }
+.diag-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: grid; place-items: center;
+  background: rgba(184,139,119,0.12);
+  color: var(--or);
+  flex: none;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.diag-icon svg { width: 26px; height: 26px; }
+.diag-card:hover .diag-icon { background: var(--or); color: #fff; transform: scale(1.08); }
+.diag-index {
+  font-family: var(--font-titre);
+  font-weight: 700; font-size: 0.95rem;
+  color: var(--or-clair);
+  font-variant-numeric: tabular-nums;
+}
+.diag-card h3 {
+  color: var(--gris-titre);
+  font-size: 1.14rem;
+  line-height: 1.25;
+  margin: 0;
+}
+.diag-card p {
+  color: var(--gris-corps);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) { .diag-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .diag-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .diag-card, .diag-icon, .diag-card::before { transition: none; }
+  .diag-card:hover { transform: none; }
+  .diag-card:hover .diag-icon { transform: none; }
+  .diag-card:hover::before { transform: scaleX(1); }
+}
