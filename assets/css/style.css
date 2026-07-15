@@ -216,13 +216,14 @@ h1, h2, h3, h4 {
 }
 .logo-light .logo-sub { color: var(--or-clair); border-left-color: rgba(255,255,255,0.25); }
 
-.main-nav { display: flex; gap: 1.55rem; }
+.main-nav { display: flex; gap: 1.15rem; flex-wrap: nowrap; }
 .main-nav a {
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--gris-titre);
   position: relative;
   padding: 0.2rem 0;
+  white-space: nowrap;      /* évite qu'un libellé long passe sur 2 lignes */
   transition: color 0.2s ease;
 }
 .main-nav a::after {
@@ -312,7 +313,8 @@ h1, h2, h3, h4 {
 /* Slide 2 : mention + logos des associations partenaires */
 .hero-partners-note { font-size: 0.9rem; color: var(--gris-corps); font-weight: 500; margin: -0.8rem 0 0.7rem; }
 .hero-partners { display: flex; align-items: center; gap: 1.6rem; margin: 0 0 1.6rem; }
-.hero-partners img { height: 36px; width: auto; }
+/* multiply : neutralise le fond blanc du PNG UNICED sur le voile crème */
+.hero-partners img { height: 36px; width: auto; mix-blend-mode: multiply; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.8rem; }
 .hero-reassure {
   display: flex; align-items: center; flex-wrap: wrap; gap: 0.7rem;
@@ -1081,10 +1083,14 @@ h1, h2, h3, h4 {
 /* =================================================================
    16. RESPONSIVE
    ================================================================= */
-@media (max-width: 1024px) {
+/* Menu burger dès 1180px : le menu complet (libellés longs) ne tient
+   proprement sur une ligne qu'au-delà de cette largeur. */
+@media (max-width: 1180px) {
   .main-nav, .header-cta { display: none; }
   .nav-toggle { display: flex; }
+}
 
+@media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-media { order: -1; max-width: 520px; }
   .approach-grid { grid-template-columns: 1fr; }
