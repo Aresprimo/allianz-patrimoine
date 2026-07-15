@@ -31,7 +31,7 @@
 
   /* Rayons */
   --r-s: 8px;
-  --r-m: 14px;
+  --r-m: 16px;
   --r-l: 22px;
 
   /* Rythme */
@@ -107,8 +107,8 @@ h1, h2, h3, h4 {
   max-width: 56ch;
 }
 
-/* Paragraphes de corps justifiés (avec césure pour éviter les trous).
-   Les blocs volontairement centrés sont rétablis plus bas. */
+/* Corps de texte aligné à gauche (ragged-right) : lecture plus nette et plus
+   premium que le justifié, qui créait des « rivières » d'espaces irréguliers. */
 .hero-lead,
 .section-lead,
 .stack-desc,
@@ -116,12 +116,13 @@ h1, h2, h3, h4 {
 .cta-lead,
 .partners-copy p,
 .partner-logos-note,
-.testimonial blockquote,
 .footer-tagline {
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+  hyphens: manual;
 }
-/* On garde le centrage là où le design le veut */
+/* Centrage là où l'en-tête ou le CTA est centré */
+.section-head .section-lead,
+.services-head .section-lead,
 .approach-copy-center .section-lead,
 .approach-copy-center .approach-note,
 .cta .cta-lead,
@@ -171,6 +172,29 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 .btn-light:hover { background: #fff; color: var(--bleu-nuit); }
+
+/* -------- 3 bis. Accessibilité : focus clavier + reduced-motion -------- */
+/* Anneau de focus net pour la navigation au clavier (invisible à la souris) */
+:where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--or);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible { outline-offset: 4px; }
+/* Sur fond sombre (footer, CTA, cartes sombres), anneau plus clair */
+.site-footer :focus-visible,
+.cta :focus-visible,
+.stats :focus-visible { outline-color: var(--or-clair); }
+
+/* Respecte la préférence système « animations réduites » sur tout le site */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* -------- 4. Header -------- */
 .site-header {
@@ -656,7 +680,7 @@ h1, h2, h3, h4 {
   border-radius: var(--r-m);
   padding: 1.6rem 1.4rem 1.8rem;
   text-align: center;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .method-step:hover {
   transform: translateY(-6px);
@@ -697,7 +721,7 @@ h1, h2, h3, h4 {
   border: 1px solid var(--filet);
   border-radius: var(--r-m);
   overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .target-card:hover {
   transform: translateY(-6px);
@@ -884,6 +908,12 @@ h1, h2, h3, h4 {
   font-weight: 600;
   color: var(--gris-titre);
   font-size: 1.05rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.partners-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ombre-douce);
+  border-color: rgba(184,139,119,0.5);
 }
 
 /* -------- 13. CTA final -------- */
@@ -1166,8 +1196,8 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .section-head { text-align: center; max-width: 720px; margin: 0 auto clamp(2rem, 5vh, 3rem); }
 .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .info-grid.four { grid-template-columns: repeat(4, 1fr); }
-.info-card { background: var(--creme); border: 1px solid var(--filet); border-radius: var(--r-m); padding: 1.7rem; transition: transform .3s ease, box-shadow .3s ease; }
-.info-card:hover { transform: translateY(-4px); box-shadow: var(--ombre-douce); }
+.info-card { background: var(--creme); border: 1px solid var(--filet); border-radius: var(--r-m); padding: 1.7rem; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.info-card:hover { transform: translateY(-6px); box-shadow: var(--ombre-douce); border-color: rgba(184,139,119,0.5); }
 .info-card h3 { color: var(--gris-titre); margin-bottom: 0.55rem; font-size: 1.12rem; }
 .info-card p { color: var(--gris-corps); margin: 0; }
 .section-beige .info-card { background: var(--blanc); }
@@ -1239,7 +1269,7 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 /* =================================================================
    Home — refonte (diagnostic, moments de vie, focus, cas clients)
    ================================================================= */
-.section-pad { padding: clamp(3.5rem, 8vh, 6rem) 0; }
+.section-pad { padding: clamp(4rem, 9vh, 7rem) 0; }
 .section-head { max-width: 720px; margin: 0 auto clamp(2rem, 4vw, 3rem); text-align: center; }
 .section-head .section-lead { margin-inline: auto; }
 
