@@ -316,8 +316,7 @@ h1, h2, h3, h4 {
 /* Slide 2 : mention + logos des associations partenaires */
 .hero-partners-note { font-size: 0.9rem; color: var(--gris-corps); font-weight: 500; margin: -0.8rem 0 0.7rem; }
 .hero-partners { display: flex; align-items: center; gap: 1.6rem; margin: 0 0 1.6rem; }
-/* multiply : neutralise le fond blanc du PNG UNICED sur le voile crème */
-.hero-partners img { height: 36px; width: auto; mix-blend-mode: multiply; }
+.hero-partners img { height: 36px; width: auto; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.8rem; }
 .hero-reassure {
   display: flex; align-items: center; flex-wrap: wrap; gap: 0.7rem;
