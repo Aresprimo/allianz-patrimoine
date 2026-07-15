@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=12" />
+  <link rel="stylesheet" href="assets/css/style.css?v=13" />
 </head>
 <body>
 
@@ -21,7 +21,7 @@
 
       <nav class="main-nav" aria-label="Navigation principale">
         <a href="epargne.html">Épargne</a>
-        <a href="prevoyance-sante.html">Prévoyance santé</a>
+        <a href="prevoyance-sante.html">Prévoyance &amp; protection sociale</a>
         <a href="assurance-emprunteur.html">Assurance emprunteur</a>
         <a href="scpi.html">SCPI</a>
         <a href="associations.html">Associations</a>
@@ -37,7 +37,7 @@
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
       <a href="epargne.html">Épargne</a>
-      <a href="prevoyance-sante.html">Prévoyance santé</a>
+      <a href="prevoyance-sante.html">Prévoyance &amp; protection sociale</a>
       <a href="assurance-emprunteur.html">Assurance emprunteur</a>
       <a href="scpi.html">SCPI</a>
       <a href="associations.html">Associations</a>
@@ -89,12 +89,14 @@
             <div class="form-field">
               <label for="sujet">Votre demande concerne</label>
               <select id="sujet" name="sujet">
-                <option value="prevoyance">Prévoyance santé</option>
+                <option value="prevoyance">Prévoyance &amp; protection sociale</option>
                 <option value="epargne">Épargne &amp; placements</option>
                 <option value="emprunteur">Assurance emprunteur</option>
                 <option value="scpi">SCPI</option>
-                <option value="associations">Associations (UNIM / UNICED)</option>
+                <option value="associations">Associations &amp; fédérations</option>
                 <option value="luxembourgeois">Contrat luxembourgeois</option>
+                <option value="partenaire">Partenariat prescripteur</option>
+                <option value="permanence">Organiser une permanence</option>
                 <option value="autre">Autre / prise de rendez-vous</option>
               </select>
             </div>
@@ -149,7 +151,7 @@
 
       <nav class="footer-col" aria-label="Expertises">
         <h4>Expertises</h4>
-        <a href="prevoyance-sante.html">Prévoyance santé</a>
+        <a href="prevoyance-sante.html">Prévoyance &amp; protection sociale</a>
         <a href="epargne.html">Épargne financière</a>
         <a href="assurance-emprunteur.html">Assurance emprunteur</a>
         <a href="scpi.html">SCPI</a>
@@ -195,5 +197,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Pré-remplissage du sujet depuis l'URL (?sujet=...) pour qualifier les leads -->
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var sujet = params.get("sujet");
+      if (!sujet) return;
+      var select = document.getElementById("sujet");
+      if (select && [].some.call(select.options, function (o) { return o.value === sujet; })) {
+        select.value = sujet;
+      }
+    })();
+  </script>
 </body>
 </html>

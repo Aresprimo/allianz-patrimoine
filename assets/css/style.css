@@ -1219,3 +1219,46 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
   .info-grid, .info-grid.four { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* =================================================================
+   Home — refonte (diagnostic, moments de vie, focus, cas clients)
+   ================================================================= */
+.section-pad { padding: clamp(3.5rem, 8vh, 6rem) 0; }
+.section-head { max-width: 720px; margin: 0 auto clamp(2rem, 4vw, 3rem); text-align: center; }
+.section-head .section-lead { margin-inline: auto; }
+
+/* Sur-titre d'accroche interrogatif (diagnostic) */
+.section-ask { font-family: var(--font-titre); font-weight: 700; color: var(--gris-titre);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.2; text-align: center;
+  max-width: 22ch; margin: 0 auto 1rem; }
+
+/* Moments de vie — chips */
+.moments-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; max-width: 940px; margin: 0 auto; }
+.moment-chip { display: inline-flex; align-items: center; gap: 0.55rem; background: var(--blanc);
+  border: 1px solid var(--filet); border-radius: 999px; padding: 0.75rem 1.25rem;
+  color: var(--gris-titre); font-weight: 600; font-size: 0.95rem;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.moment-chip:hover { transform: translateY(-3px); box-shadow: var(--ombre-douce); border-color: var(--or); }
+.moment-chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--or); flex: none; }
+.section-beige .moment-chip { background: var(--blanc); }
+
+/* Encadré (Clean Share, note différenciante) */
+.callout { max-width: 860px; margin: 0 auto; background: var(--blanc); border: 1px solid var(--filet);
+  border-left: 4px solid var(--or); border-radius: var(--r-m); padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow: var(--ombre-douce); }
+.callout h3 { color: var(--gris-titre); margin: 0 0 0.6rem; font-size: 1.15rem; }
+.callout p { color: var(--gris-corps); margin: 0; }
+.callout .callout-tag { display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--or); font-weight: 700; margin-bottom: 0.5rem; }
+
+/* Carte "info" avec petit lien d'action */
+.info-card .card-link { display: inline-block; margin-top: 0.7rem; color: var(--or); font-weight: 600; font-size: 0.92rem; }
+.info-card .card-link:hover { text-decoration: underline; }
+
+/* Cas d'accompagnement (remplace témoignages) */
+.case-tag { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--or); font-weight: 700; margin-bottom: 0.5rem; }
+
+/* Section-head aligné à gauche (variante) */
+.section-head.is-left { margin-inline: 0; text-align: left; }
+.section-head.is-left .section-lead { margin-inline: 0; }
