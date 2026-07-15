@@ -19,6 +19,7 @@
   /* Accents */
   --or:         #b88b77;
   --or-clair:   #d3b3a5;
+  --or-texte:   #8a5a44;   /* variante foncée pour TEXTE/LIENS sur fond clair (WCAG AA : ≥4.5:1 sur blanc, crème et beige) */
   --bleu:       #b88b77;   /* action = rose-taupe */
   --bleu-clair: #1B5FC4;
   --bleu-nuit:  #333333;   /* surfaces sombres (footer, CTA, cartes) — bleu profond */
@@ -92,7 +93,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.22em;
   font-size: 0.74rem;
   font-weight: 600;
-  color: var(--or);
+  color: var(--or-texte);
   margin: 0 0 1rem;
 }
 .eyebrow-light { color: var(--or-clair); }
@@ -1049,12 +1050,12 @@ h1, h2, h3, h4 {
   transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
-.faq-item[open] summary { color: var(--or); }
+.faq-item[open] summary { color: var(--or-texte); }
 .faq-item[open] summary::after { transform: rotate(-135deg); margin-top: 3px; }
 .faq-answer { padding: 0 1.4rem 1.3rem; }
 .faq-answer p { margin: 0; color: var(--gris-corps); text-align: left; }
 .faq-cta { text-align: center; margin-top: 2rem; color: var(--gris-corps); }
-.faq-cta a { color: var(--or); font-weight: 600; }
+.faq-cta a { color: var(--or-texte); font-weight: 600; }
 .faq-cta a:hover { text-decoration: underline; }
 
 /* -------- 14. Footer -------- */
@@ -1181,7 +1182,7 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .page-hero { background: var(--beige); padding: clamp(7rem, 13vh, 9.5rem) 0 clamp(3rem, 7vh, 5rem); }
 .page-hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .breadcrumb { display: flex; gap: 0.5rem; align-items: center; font-size: 0.85rem; color: var(--gris-corps); margin-bottom: 1.1rem; }
-.breadcrumb a { color: var(--or); font-weight: 600; }
+.breadcrumb a { color: var(--or-texte); font-weight: 600; }
 .breadcrumb a:hover { text-decoration: underline; }
 .page-hero-copy .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.8rem; }
 .page-hero-media { position: relative; }
@@ -1196,6 +1197,7 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .section-head { text-align: center; max-width: 720px; margin: 0 auto clamp(2rem, 5vh, 3rem); }
 .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .info-grid.four { grid-template-columns: repeat(4, 1fr); }
+.info-grid.two { grid-template-columns: repeat(2, 1fr); }
 .info-card { background: var(--creme); border: 1px solid var(--filet); border-radius: var(--r-m); padding: 1.7rem; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .info-card:hover { transform: translateY(-6px); box-shadow: var(--ombre-douce); border-color: rgba(184,139,119,0.5); }
 .info-card h3 { color: var(--gris-titre); margin-bottom: 0.55rem; font-size: 1.12rem; }
@@ -1217,7 +1219,7 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.1rem; }
 .form-field label { font-size: 0.85rem; font-weight: 600; color: var(--gris-titre); }
-.form-field label .req { color: var(--or); }
+.form-field label .req { color: var(--or-texte); }
 .form-field input,
 .form-field select,
 .form-field textarea {
@@ -1234,11 +1236,12 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .form-check label { font-size: 0.82rem; color: var(--gris-corps); line-height: 1.5; }
 .contact-form .btn { width: 100%; justify-content: center; }
 .form-note { font-size: 0.82rem; color: var(--gris-corps); margin-top: 1rem; text-align: center; }
+.form-legend { font-size: 0.82rem; color: var(--gris-corps); margin: 0 0 1rem; }
 .contact-aside { display: flex; flex-direction: column; gap: 1.4rem; }
 .contact-info-card { background: var(--beige); border: 1px solid var(--filet); border-radius: var(--r-m); padding: 1.5rem; }
 .contact-info-card h3 { color: var(--gris-titre); margin: 0 0 0.9rem; font-size: 1.1rem; }
 .contact-info-card p { margin: 0 0 0.5rem; color: var(--gris-corps); }
-.contact-info-card a { color: var(--or); font-weight: 600; }
+.contact-info-card a { color: var(--or-texte); font-weight: 600; }
 .contact-info-card a:hover { text-decoration: underline; }
 
 /* ---- Prose (pages légales / éditoriales) ---- */
@@ -1250,7 +1253,7 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .legal-prose p { margin: 0 0 1rem; }
 .legal-prose ul { list-style: disc; padding-left: 1.4rem; margin: 0 0 1.2rem; }
 .legal-prose li { margin-bottom: 0.4rem; }
-.legal-prose a { color: var(--or); font-weight: 600; }
+.legal-prose a { color: var(--or-texte); font-weight: 600; }
 .legal-prose a:hover { text-decoration: underline; }
 .legal-prose strong { color: var(--gris-titre); }
 
@@ -1262,7 +1265,7 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
   .contact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
-  .info-grid, .info-grid.four { grid-template-columns: 1fr; }
+  .info-grid, .info-grid.four, .info-grid.two { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
 
@@ -1295,15 +1298,15 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .callout h3 { color: var(--gris-titre); margin: 0 0 0.6rem; font-size: 1.15rem; }
 .callout p { color: var(--gris-corps); margin: 0; }
 .callout .callout-tag { display: inline-block; font-size: 0.72rem; text-transform: uppercase;
-  letter-spacing: 0.14em; color: var(--or); font-weight: 700; margin-bottom: 0.5rem; }
+  letter-spacing: 0.14em; color: var(--or-texte); font-weight: 700; margin-bottom: 0.5rem; }
 
 /* Carte "info" avec petit lien d'action */
-.info-card .card-link { display: inline-block; margin-top: 0.7rem; color: var(--or); font-weight: 600; font-size: 0.92rem; }
+.info-card .card-link { display: inline-block; margin-top: 0.7rem; color: var(--or-texte); font-weight: 600; font-size: 0.92rem; }
 .info-card .card-link:hover { text-decoration: underline; }
 
 /* Cas d'accompagnement (remplace témoignages) */
 .case-tag { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em;
-  color: var(--or); font-weight: 700; margin-bottom: 0.5rem; }
+  color: var(--or-texte); font-weight: 700; margin-bottom: 0.5rem; }
 
 /* Section-head aligné à gauche (variante) */
 .section-head.is-left { margin-inline: 0; text-align: left; }

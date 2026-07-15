@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=23" />
+  <link rel="stylesheet" href="assets/css/style.css?v=25" />
 
   <!-- Données structurées : fil d'ariane -->
   <script type="application/ld+json">
@@ -213,7 +213,7 @@
             Chaque métier présente des contraintes spécifiques. Les besoins d'un médecin, d'un pharmacien, d'un kinésithérapeute, d'un avocat ou d'un expert-comptable ne sont pas identiques. La protection doit tenir compte de la réalité de votre activité.
           </p>
         </div>
-        <div class="info-grid reveal" style="max-width: 940px; margin-inline: auto; grid-template-columns: 1fr 1fr;">
+        <div class="info-grid two reveal" style="max-width: 940px; margin-inline: auto;">
           <article class="info-card">
             <span class="case-tag">Professionnels de santé — UNIM</span>
             <h3>Métiers de la santé</h3>
@@ -306,6 +306,9 @@
           <li>Protection des enfants pendant leurs études</li>
         </ul>
         <p class="pull-quote reveal">Une bonne protection ne s'arrête pas à vous : elle sécurise aussi ceux qui comptent sur vous.</p>
+        <div class="section-head reveal" style="margin: 2.2rem auto 0;">
+          <a href="#diagnostic" class="btn btn-primary">Faire le point sur ma protection</a>
+        </div>
       </div>
     </section>
 
@@ -421,7 +424,7 @@
             Nous travaillons avec des solutions négociées par des associations professionnelles spécialisées — l'UNIM pour les professionnels de santé, l'UNICED pour les professionnels du chiffre et du droit. Des garanties conçues pour les réalités de chaque profession, avec une approche associative, des services dédiés et des conditions négociées.
           </p>
         </div>
-        <div class="info-grid reveal" style="max-width: 900px; margin-inline: auto; grid-template-columns: 1fr 1fr;">
+        <div class="info-grid two reveal" style="max-width: 900px; margin-inline: auto;">
           <article class="info-card">
             <span class="case-tag">Professionnels de santé</span>
             <h3>UNIM</h3>
@@ -436,7 +439,7 @@
           </article>
         </div>
         <div class="partner-band reveal" style="margin-top:2rem;">
-          <div class="partner-logos-row"><img src="assets/img/unim-logo.svg" alt="UNIM — professionnels de santé" loading="lazy" /><img src="assets/img/uniced-logo.png?v=2" alt="UNICED — professions du chiffre et du droit" loading="lazy" /></div>
+          <div class="partner-logos-row"><img src="assets/img/unim-logo.svg" alt="UNIM" width="120" height="44" loading="lazy" /><img src="assets/img/uniced-logo.png?v=2" alt="UNICED" width="140" height="49" loading="lazy" /></div>
         </div>
       </div>
     </section>
@@ -536,6 +539,9 @@
         <div class="contact-grid">
           <!-- Formulaire — à connecter à un service d'envoi (Formspree, EmailJS). Remplacer l'action. -->
           <form class="contact-form reveal" action="https://formspree.io/f/VOTRE_ID" method="POST" aria-label="Demande de diagnostic protection sociale">
+            <!-- Honeypot anti-spam (masqué aux humains, ignoré des lecteurs d'écran) -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+            <p class="form-legend">Les champs marqués <span class="req">*</span> sont obligatoires.</p>
             <div class="form-row">
               <div class="form-field"><label for="prenom">Prénom <span class="req">*</span></label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required /></div>
               <div class="form-field"><label for="nom">Nom <span class="req">*</span></label><input type="text" id="nom" name="nom" autocomplete="family-name" required /></div>
@@ -548,6 +554,7 @@
               <div class="form-field"><label for="profession">Profession</label><input type="text" id="profession" name="profession" placeholder="Ex. médecin, avocat, pharmacien…" /></div>
               <div class="form-field"><label for="statut">Statut</label>
                 <select id="statut" name="statut">
+                  <option value="" disabled selected>Sélectionnez…</option>
                   <option value="independant">Indépendant</option>
                   <option value="liberal">Profession libérale</option>
                   <option value="dirigeant">Dirigeant</option>
@@ -558,18 +565,18 @@
             </div>
             <div class="form-row">
               <div class="form-field"><label for="prevoyance">Avez-vous déjà une prévoyance ?</label>
-                <select id="prevoyance" name="prevoyance"><option value="oui">Oui</option><option value="non">Non</option><option value="inconnu">Je ne sais pas précisément</option></select>
+                <select id="prevoyance" name="prevoyance"><option value="" disabled selected>Sélectionnez…</option><option value="oui">Oui</option><option value="non">Non</option><option value="inconnu">Je ne sais pas précisément</option></select>
               </div>
               <div class="form-field"><label for="cabinet">Cabinet ou locaux professionnels ?</label>
-                <select id="cabinet" name="cabinet"><option value="oui">Oui</option><option value="non">Non</option></select>
+                <select id="cabinet" name="cabinet"><option value="" disabled selected>Sélectionnez…</option><option value="oui">Oui</option><option value="non">Non</option></select>
               </div>
             </div>
             <div class="form-row">
               <div class="form-field"><label for="salaries">Avez-vous des salariés ?</label>
-                <select id="salaries" name="salaries"><option value="non">Non</option><option value="oui">Oui</option></select>
+                <select id="salaries" name="salaries"><option value="" disabled selected>Sélectionnez…</option><option value="non">Non</option><option value="oui">Oui</option></select>
               </div>
               <div class="form-field"><label for="emprunt">Emprunt professionnel ?</label>
-                <select id="emprunt" name="emprunt"><option value="non">Non</option><option value="oui">Oui</option></select>
+                <select id="emprunt" name="emprunt"><option value="" disabled selected>Sélectionnez…</option><option value="non">Non</option><option value="oui">Oui</option></select>
               </div>
             </div>
             <div class="form-field"><label for="message">Votre message</label><textarea id="message" name="message" placeholder="Précisez votre situation ou votre besoin (facultatif)…"></textarea></div>
@@ -578,7 +585,7 @@
               <label for="consent">J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <a href="confidentialite.html">politique de confidentialité</a>. <span class="req">*</span></label>
             </div>
             <button type="submit" class="btn btn-primary">Demander mon diagnostic personnalisé</button>
-            <p class="form-note">Ou appelez-nous directement au <a href="tel:+33638229839" style="color:var(--or);font-weight:600;">+33 6 38 22 98 39</a> — premier échange gratuit et sans engagement.</p>
+            <p class="form-note">Ou appelez-nous directement au <a href="tel:+33638229839" style="color:var(--or-texte);font-weight:600;">+33 6 38 22 98 39</a> — premier échange gratuit et sans engagement.</p>
           </form>
 
           <aside class="contact-aside reveal">
@@ -605,7 +612,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo logo-light" aria-label="Allianz Patrimoine, accueil">
-          <img class="logo-img" src="assets/img/allianz-logo-creme.svg" alt="Allianz" width="120" height="30" />
+          <img class="logo-img" src="assets/img/allianz-logo-creme.svg" alt="Allianz" width="120" height="30" loading="lazy" />
           <span class="logo-sub">Patrimoine</span>
         </a>
         <p class="footer-tagline">
@@ -661,9 +668,9 @@
     </div>
   </footer>
 
+  <!-- GSAP retiré : cette page n'utilise ni cartes empilées, ni timeline, ni slider
+       (le reveal au scroll et le smooth-scroll passent par Lenis + main.js). Gain perf. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js?v=15"></script>
 </body>
 </html>
