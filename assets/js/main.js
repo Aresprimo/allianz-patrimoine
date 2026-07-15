@@ -58,7 +58,7 @@
       words[idx].classList.remove("is-active");
       idx = (idx + 1) % words.length;
       words[idx].classList.add("is-active");
-    }, 2400);
+    }, 3600);
   }
 
   /* ---------------------------------------------------------------
@@ -152,11 +152,11 @@
           }
         });
       } else {
-        // Élément (ex. le <span class="rotator">) : on le garde tel quel,
-        // mais on l'anime comme un « mot » entier.
+        // Élément (ex. le <span class="rotator">) : on le garde INTACT et on ne
+        // l'anime PAS via GSAP — sinon la classe .split-word écrase son
+        // display:inline-grid et casse la superposition des mots. Il conserve sa
+        // propre animation (rotation des mots) et son inline-grid.
         root.appendChild(node);
-        node.classList && node.classList.add("split-word");
-        spans.push(node);
       }
     });
     return spans;

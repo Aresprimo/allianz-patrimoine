@@ -284,6 +284,8 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 /* Mot-clé animé (rotator) */
+/* Sélecteur renforcé : garde inline-grid même si .split-word tente de l'écraser */
+.hero-title .rotator,
 .rotator {
   position: relative;
   display: inline-grid;
