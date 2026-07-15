@@ -195,6 +195,9 @@ h1, h2, h3, h4 {
   gap: 1.5rem;
   height: 74px;
 }
+/* Empêche le logo / la nav / le CTA d'être compressés (sinon "Patrimoine"
+   déborde sur "Épargne"). La bascule burger (<=1260px) garantit qu'ils tiennent. */
+.header-inner > * { flex-shrink: 0; }
 
 .logo { display: inline-flex; align-items: center; gap: 0.55rem; }
 /* Logo SVG (ratio ~4:1) : on cale la HAUTEUR, largeur auto */
@@ -1083,9 +1086,9 @@ h1, h2, h3, h4 {
 /* =================================================================
    16. RESPONSIVE
    ================================================================= */
-/* Menu burger dès 1180px : le menu complet (libellés longs) ne tient
-   proprement sur une ligne qu'au-delà de cette largeur. */
-@media (max-width: 1180px) {
+/* Menu burger dès 1260px : le menu complet (logo + libellés longs + CTA) ne
+   tient sans compression qu'au-delà de cette largeur. */
+@media (max-width: 1260px) {
   .main-nav, .header-cta { display: none; }
   .nav-toggle { display: flex; }
 }
