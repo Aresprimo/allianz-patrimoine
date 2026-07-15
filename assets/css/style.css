@@ -1206,6 +1206,10 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .check-list { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 2.5rem; }
 .check-list li { position: relative; padding-left: 1.9rem; color: var(--gris-titre); text-align: left; }
 .check-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--or); font-weight: 700; }
+/* check-list sur fond sombre : texte clair (sinon #333 sur #333 = invisible) */
+.section-dark .check-list li { color: rgba(255,255,255,0.88); }
+.section-dark .check-list li strong { color: #fff; }
+.section-dark .check-list li::before { color: var(--or-clair); }
 .section-note { text-align: center; color: var(--gris-corps); font-size: 0.9rem; margin-top: 1.6rem; }
 .highlight-band { max-width: 800px; margin: 0 auto; text-align: center; }
 .highlight-band p { color: rgba(255,255,255,0.8); margin: 1rem auto 1.8rem; max-width: 60ch; }
