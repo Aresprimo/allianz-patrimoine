@@ -1362,6 +1362,69 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .compare-table td:last-child { background: rgba(184,139,119,0.07); color: var(--gris-titre); font-weight: 500; }
 .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: none; }
 
+/* ===== Section confiance Allianz (fond sombre, 2 colonnes) ===== */
+.allianz-trust {
+  background:
+    radial-gradient(120% 90% at 85% 0%, rgba(184,139,119,0.14), transparent 60%),
+    var(--bleu-nuit);
+  padding: clamp(4.5rem, 10vh, 7.5rem) 0;
+  color: rgba(255,255,255,0.82);
+}
+.allianz-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; }
+.allianz-copy .section-title { color: #fff; max-width: 18ch; }
+.allianz-copy .section-lead { color: rgba(255,255,255,0.75); }
+.az-subhead {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--or-clair); font-weight: 700;
+  margin: 2.2rem 0 1.3rem; padding-top: 1.7rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.az-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 1.6rem; margin-bottom: 2.4rem; }
+.az-feature { display: flex; gap: 0.85rem; align-items: flex-start; }
+.az-ico {
+  flex: none; width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid rgba(255,255,255,0.18); color: var(--or-clair);
+  background: rgba(255,255,255,0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.az-ico svg { width: 20px; height: 20px; }
+.az-feature:hover .az-ico { transform: translateY(-3px); border-color: var(--or-clair); }
+.az-feature h3 { font-size: 0.95rem; color: #fff; margin: 0 0 0.3rem; }
+.az-feature p { font-size: 0.85rem; margin: 0; color: rgba(255,255,255,0.65); line-height: 1.5; }
+/* Colonne visuelle : image arrondie + carte flottante (verre sombre) */
+.az-media { position: relative; }
+.az-media > img {
+  width: 100%; border-radius: 28px;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 68% center;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 40px 80px -40px rgba(0,0,0,0.8);
+}
+.az-card {
+  position: absolute; left: 1.1rem; right: 1.1rem; bottom: 1.1rem;
+  background: rgba(24,24,24,0.72);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 20px; padding: 1.25rem 1.3rem 1.35rem;
+  text-align: center;
+}
+.az-card-logo { height: 28px; width: auto; margin: 0 auto 0.95rem; display: block; }
+.az-card-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1rem;
+}
+.az-stat { display: grid; gap: 0.2rem; justify-items: center; }
+.az-stat svg { width: 20px; height: 20px; color: var(--or-clair); }
+.az-stat strong { color: #fff; font-family: var(--font-titre); font-size: 1.15rem; line-height: 1.1; }
+.az-stat span { font-size: 0.66rem; color: rgba(255,255,255,0.6); line-height: 1.35; }
+.az-note { margin-top: 0.9rem; font-size: 0.7rem; color: rgba(255,255,255,0.45); text-align: center; }
+@media (max-width: 1080px) { .az-features { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) {
+  .allianz-grid { grid-template-columns: 1fr; }
+  .az-media { max-width: 520px; margin-inline: auto; width: 100%; }
+}
+@media (max-width: 520px) { .az-features { grid-template-columns: 1fr; } }
+
 /* Rangées bénéfice (icône + texte) — ex. section prescripteurs */
 .benefit-rows { display: grid; gap: 1rem; }
 .benefit-row {
