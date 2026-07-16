@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=27" />
+  <link rel="stylesheet" href="assets/css/style.css?v=28" />
 
   <!-- Données structurées : fil d'ariane -->
   <script type="application/ld+json">
@@ -177,29 +177,32 @@
       </div>
     </section>
 
-    <!-- 3. DIAGNOSTIC -->
+    <!-- 3. DIAGNOSTIC — photo à gauche / contenu à droite -->
     <section class="section-pad">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">L'approche conseil</p>
-          <h2 class="section-title">Un diagnostic avant toute proposition</h2>
-          <p class="section-lead">
-            Avant de proposer un contrat, nous analysons votre situation globale : profession, statut, régime obligatoire, revenus, charges fixes, emprunts, situation familiale, associés éventuels et protections déjà en place. Cette approche permet de construire une solution réellement adaptée, et non une couverture standard.
-          </p>
+      <div class="container split">
+        <div class="split-media reveal">
+          <img src="assets/img/allianzworker.png" alt="Conseiller du cabinet analysant la protection sociale d'un professionnel libéral" loading="lazy" width="800" height="600" />
         </div>
-        <ul class="check-list reveal">
-          <li>Votre profession et votre statut</li>
-          <li>Vos revenus actuels</li>
-          <li>Vos charges fixes personnelles et professionnelles</li>
-          <li>Votre régime obligatoire</li>
-          <li>Vos contrats existants</li>
-          <li>Vos emprunts privés ou professionnels</li>
-          <li>Votre situation familiale</li>
-          <li>La présence d'associés ou de salariés</li>
-          <li>Vos objectifs de protection à court et long terme</li>
-        </ul>
-        <div class="section-head reveal" style="margin: 2.2rem auto 0;">
-          <a href="#diagnostic" class="btn btn-primary">Réaliser mon diagnostic personnalisé</a>
+        <div class="split-content reveal">
+          <div class="section-head">
+            <p class="eyebrow">L'approche conseil</p>
+            <h2 class="section-title">Un diagnostic avant toute proposition</h2>
+            <p class="section-lead">
+              Avant de proposer un contrat, nous analysons votre situation globale. Cette approche permet de construire une solution réellement adaptée, et non une couverture standard.
+            </p>
+          </div>
+          <ul class="mini-list">
+            <li>Votre profession, votre statut et votre régime obligatoire</li>
+            <li>Vos revenus actuels et vos charges fixes</li>
+            <li>Vos contrats existants</li>
+            <li>Vos emprunts privés ou professionnels</li>
+            <li>Votre situation familiale</li>
+            <li>La présence d'associés ou de salariés</li>
+            <li>Vos objectifs de protection à court et long terme</li>
+          </ul>
+          <div style="margin-top: 1.8rem;">
+            <a href="#diagnostic" class="btn btn-primary">Réaliser mon diagnostic personnalisé</a>
+          </div>
         </div>
       </div>
     </section>
@@ -214,51 +217,65 @@
             Chaque métier présente des contraintes spécifiques. Les besoins d'un médecin, d'un pharmacien, d'un kinésithérapeute, d'un avocat ou d'un expert-comptable ne sont pas identiques. La protection doit tenir compte de la réalité de votre activité.
           </p>
         </div>
-        <div class="info-grid two reveal" style="max-width: 940px; margin-inline: auto;">
-          <article class="info-card">
-            <span class="case-tag">Professionnels de santé — UNIM</span>
-            <h3>Métiers de la santé</h3>
-            <ul class="mini-list">
-              <li>Médecins, dentistes, vétérinaires</li>
-              <li>Pharmaciens</li>
-              <li>Kinésithérapeutes, infirmiers libéraux</li>
-              <li>Autres paramédicaux</li>
-            </ul>
-            <p style="margin-top:0.8rem;">Une gamme complète dédiée : prévoyance, complémentaire santé individuelle et collective, assurance emprunteur et cabinet de groupe.</p>
-          </article>
-          <article class="info-card">
-            <span class="case-tag">Chiffre &amp; droit — UNICED</span>
-            <h3>Professions du chiffre et du droit</h3>
-            <ul class="mini-list">
-              <li>Experts-comptables, commissaires aux comptes</li>
-              <li>Avocats, notaires, huissiers</li>
-              <li>Autres professions juridiques et comptables</li>
-            </ul>
-            <p style="margin-top:0.8rem;">Des contrats dédiés : prévoyance, complémentaire santé, assurance emprunteur, cabinet de groupe et personne clé.</p>
-          </article>
+        <div class="slider slider-cards reveal" data-slider data-autoplay="5500" data-per-view="3" aria-roledescription="carrousel" aria-label="Professions accompagnées">
+          <button class="slider-arrow slider-prev" type="button" aria-label="Profession précédente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="slider-viewport">
+            <div class="slider-track">
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="1 sur 4">
+                <div class="target-media"><img src="assets/img/cible-sante.jpg" alt="Professionnelle de santé libérale en cabinet" loading="lazy" width="800" height="600" /></div>
+                <div class="target-body"><h3>Professionnels de santé — UNIM</h3><p>Médecins, dentistes, pharmaciens, vétérinaires, kinésithérapeutes, infirmiers libéraux et paramédicaux.</p></div>
+              </article>
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="2 sur 4">
+                <div class="target-media"><img src="assets/img/cible-liberales.jpg" alt="Professionnel du chiffre et du droit à son bureau" loading="lazy" width="800" height="600" /></div>
+                <div class="target-body"><h3>Chiffre &amp; droit — UNICED</h3><p>Experts-comptables, commissaires aux comptes, avocats, notaires, huissiers et professions juridiques.</p></div>
+              </article>
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="3 sur 4">
+                <div class="target-media"><img src="assets/img/cible-chefs.jpg" alt="Dirigeant d'entreprise en réunion" loading="lazy" width="800" height="600" /></div>
+                <div class="target-body"><h3>Dirigeants &amp; indépendants</h3><p>Chefs d'entreprise, gérants et travailleurs non salariés : une protection calée sur votre statut.</p></div>
+              </article>
+              <article class="target-card" role="group" aria-roledescription="diapositive" aria-label="4 sur 4">
+                <div class="target-media"><img src="assets/img/cible-associations.jpg" alt="Associés d'un cabinet réunis autour d'une table" loading="lazy" width="800" height="600" /></div>
+                <div class="target-body"><h3>Exercice en groupe</h3><p>Associés d'un cabinet : garanties croisées, frais généraux et continuité d'activité.</p></div>
+              </article>
+            </div>
+          </div>
+          <button class="slider-arrow slider-next" type="button" aria-label="Profession suivante">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="slider-dots" role="tablist" aria-label="Sélection de la profession"></div>
         </div>
+        <p class="section-note">Gammes complètes UNIM (santé) et UNICED (chiffre &amp; droit) : prévoyance, complémentaire santé individuelle et collective, assurance emprunteur, cabinet de groupe et personne clé.</p>
       </div>
     </section>
 
-    <!-- 5. PILIER 1 — revenus -->
+    <!-- 5. PILIER 1 — revenus (contenu à gauche / photo à droite) -->
     <section class="section-pad">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Pilier 1 — Vos revenus</p>
-          <h2 class="section-title">Maintenir vos revenus en cas d'arrêt de travail</h2>
-          <p class="section-lead">
-            Une maladie, un accident ou une hospitalisation peut entraîner une interruption temporaire de votre activité — avec un impact immédiat sur vos revenus. L'objectif de la prévoyance est de prévoir des indemnités journalières adaptées à votre situation, à votre régime obligatoire et à votre trésorerie.
-          </p>
+      <div class="container split reverse">
+        <div class="split-media reveal">
+          <img src="assets/img/card-prevoyance.jpg" alt="Professionnelle de santé libérale en activité — protéger son revenu" loading="lazy" width="800" height="600" />
         </div>
-        <ul class="check-list reveal">
-          <li>Indemnités journalières en cas de maladie ou accident — <strong>sans franchise en cas d'agression</strong></li>
-          <li>Franchise adaptée à votre régime obligatoire et à votre trésorerie</li>
-          <li><strong>Renfort des indemnités journalières</strong> pendant les pics d'activité (jusqu'à 4 mois)</li>
-          <li><strong>Indemnisation dès le 1ᵉʳ jour</strong> en cas de chirurgie ambulatoire</li>
-          <li>Prise en compte du temps partiel thérapeutique</li>
-          <li>Options selon les besoins spécifiques du métier</li>
-        </ul>
-        <p class="section-note">Garanties, montants et options selon les conditions du contrat.</p>
+        <div class="split-content reveal">
+          <div class="section-head">
+            <p class="eyebrow">Pilier 1 — Vos revenus</p>
+            <h2 class="section-title">Maintenir vos revenus en cas d'arrêt de travail</h2>
+            <p class="section-lead">
+              Une maladie, un accident ou une hospitalisation peut entraîner une interruption temporaire de votre activité — avec un impact immédiat sur vos revenus. La prévoyance prévoit des indemnités journalières adaptées à votre situation, à votre régime obligatoire et à votre trésorerie.
+            </p>
+          </div>
+          <ul class="mini-list">
+            <li>Indemnités journalières maladie ou accident — <strong>sans franchise en cas d'agression</strong></li>
+            <li>Franchise adaptée à votre régime obligatoire et à votre trésorerie</li>
+            <li><strong>Renfort des indemnités journalières</strong> pendant les pics d'activité (jusqu'à 4 mois)</li>
+            <li><strong>Indemnisation dès le 1ᵉʳ jour</strong> en cas de chirurgie ambulatoire</li>
+            <li>Prise en compte du temps partiel thérapeutique</li>
+            <li>Options selon les besoins spécifiques du métier</li>
+          </ul>
+          <p class="section-note" style="text-align:left; margin-top:1.2rem;">Garanties, montants et options selon les conditions du contrat.</p>
+        </div>
+      </div>
+      <div class="container">
         <p class="pull-quote reveal">Votre revenu est le premier pilier de votre équilibre personnel et professionnel. Il doit être protégé avec précision.</p>
       </div>
     </section>
