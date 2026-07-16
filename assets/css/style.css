@@ -1639,3 +1639,66 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
   .diag-card:hover .diag-icon { transform: none; }
   .diag-card:hover::before { transform: scaleX(1); }
 }
+
+/* -------- Témoignages "reel" 2 colonnes (façon Framer Testimonial Reel) --------
+   Gauche : eyebrow + phrase d'intro + lien avis Google + flèches rondes.
+   Droite : témoignage courant (citation en grand, texte, auteur), fondu au changement. */
+.treel {
+  display: grid; grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4rem); align-items: center;
+  max-width: 1060px; margin-inline: auto;
+}
+.treel-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 1.1rem; }
+.treel-lead {
+  margin: 0; font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.35;
+  color: var(--gris-corps); letter-spacing: -0.01em; max-width: 26ch;
+}
+.treel-google {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  font-size: 0.92rem; font-weight: 600; color: var(--or-texte);
+}
+.treel-google:hover span:last-child { text-decoration: underline; }
+.treel-stars { color: var(--or); font-size: 1.05rem; letter-spacing: 0.12em; }
+.treel-nav { display: flex; gap: 0.7rem; margin-top: 0.4rem; }
+.treel-btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer;
+  background: var(--blanc); border: 1px solid var(--filet); color: var(--gris-titre);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+}
+.treel-btn svg { width: 20px; height: 20px; }
+.treel-btn:hover { background: var(--or); border-color: var(--or); color: #fff; }
+.treel-btn:active { transform: scale(0.94); }
+
+/* Pile de slides : tous dans la même cellule de grille, un seul visible */
+.treel-stage { display: grid; }
+.treel-slide {
+  grid-area: 1 / 1;
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  pointer-events: none; visibility: hidden;
+}
+.treel-slide.is-active { opacity: 1; transform: none; pointer-events: auto; visibility: visible; }
+.treel-quote {
+  margin: 0 0 1rem; font-family: var(--font-titre); font-weight: 600;
+  font-size: clamp(1.5rem, 3.2vw, 2.3rem); line-height: 1.2;
+  letter-spacing: -0.02em; color: var(--gris-titre);
+}
+.treel-text { margin: 0 0 1.6rem; font-size: 1.05rem; line-height: 1.6; color: var(--gris-corps); }
+.treel-author { display: flex; align-items: center; gap: 0.9rem; }
+.treel-avatar {
+  flex: none; width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(184,139,119,0.16); color: var(--or-texte);
+  font-family: var(--font-titre); font-weight: 700; font-size: 1.1rem;
+}
+.treel-author strong { display: block; color: var(--gris-titre); font-size: 0.98rem; }
+.treel-author div > span { color: var(--gris-corps); font-size: 0.88rem; }
+
+@media (max-width: 900px) {
+  .treel { grid-template-columns: 1fr; gap: 2rem; }
+  .treel-lead { max-width: none; }
+}
+/* Sans JS : on empile tous les témoignages, lisibles */
+.no-js .treel-slide { opacity: 1; transform: none; visibility: visible; pointer-events: auto; margin-bottom: 2rem; }
+.no-js .treel-nav { display: none; }

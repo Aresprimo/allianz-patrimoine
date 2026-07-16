@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=36" />
+  <link rel="stylesheet" href="assets/css/style.css?v=37" />
 </head>
 <body>
 
@@ -745,32 +745,82 @@
     </section>
 
     <!-- ============================================================= -->
-    <!-- CAS D'ACCOMPAGNEMENT (anonymisés)                              -->
+    <!-- TÉMOIGNAGES — reel 2 colonnes (à relier aux avis Google)       -->
     <!-- ============================================================= -->
-    <section class="testimonials">
+    <section class="testimonials" id="temoignages">
       <div class="container">
-        <div class="method-head reveal">
-          <p class="eyebrow">Notre façon de travailler</p>
-          <h2 class="section-title">Cas d'accompagnement</h2>
+        <div class="treel reveal" data-treel data-autoplay="7000">
+          <!-- Colonne gauche : intro + navigation -->
+          <div class="treel-intro">
+            <p class="eyebrow">Témoignages</p>
+            <p class="treel-lead">
+              La confiance se construit dans la durée&nbsp;: voici ce que nos
+              clients disent de notre accompagnement.
+            </p>
+            <!-- TODO avis Google : remplacer href="#" par l'URL du profil
+                 Google Business (g.page/…) et la note réelle -->
+            <a class="treel-google" href="#" aria-label="Voir nos avis sur Google">
+              <span class="treel-stars" aria-hidden="true">★★★★★</span>
+              <span>Avis publiés sur Google</span>
+            </a>
+            <div class="treel-nav">
+              <button class="treel-btn treel-prev" type="button" aria-label="Témoignage précédent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="treel-btn treel-next" type="button" aria-label="Témoignage suivant">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Colonne droite : témoignages (un seul visible à la fois) -->
+          <!-- TODO avis Google : remplacer ces exemples par de vrais avis -->
+          <div class="treel-stage" aria-live="polite">
+            <article class="treel-slide is-active">
+              <p class="treel-quote">Un accompagnement clair et vraiment sur mesure.</p>
+              <p class="treel-text">
+                Diagnostic prévoyance complet, explications simples et un suivi
+                régulier. Je sais enfin précisément ce que couvre mon contrat.
+              </p>
+              <footer class="treel-author">
+                <span class="treel-avatar" aria-hidden="true">S</span>
+                <div>
+                  <strong>Dr&nbsp;S.</strong>
+                  <span>Chirurgien-dentiste · avis Google</span>
+                </div>
+              </footer>
+            </article>
+            <article class="treel-slide">
+              <p class="treel-quote">Des réponses rapides et un vrai suivi dans le temps.</p>
+              <p class="treel-text">
+                Après la cession de mon entreprise, j'ai été accompagné pas à pas
+                dans la structuration de mon capital et la préparation de la transmission.
+              </p>
+              <footer class="treel-author">
+                <span class="treel-avatar" aria-hidden="true">M</span>
+                <div>
+                  <strong>M.&nbsp;L.</strong>
+                  <span>Dirigeant · avis Google</span>
+                </div>
+              </footer>
+            </article>
+            <article class="treel-slide">
+              <p class="treel-quote">Une équipe disponible et à l'écoute de nos besoins.</p>
+              <p class="treel-text">
+                Sécurisation de notre trésorerie et mise en place d'un reporting
+                clair pour le bureau, dans un cadre adapté au monde associatif.
+              </p>
+              <footer class="treel-author">
+                <span class="treel-avatar" aria-hidden="true">A</span>
+                <div>
+                  <strong>Association</strong>
+                  <span>Trésorier · avis Google</span>
+                </div>
+              </footer>
+            </article>
+          </div>
         </div>
-        <div class="info-grid reveal" style="max-width: 1000px; margin-inline: auto;">
-          <article class="info-card">
-            <span class="case-tag">Professionnel de santé</span>
-            <h3>Diagnostic prévoyance</h3>
-            <p>Mise en évidence des écarts de couverture en cas d'arrêt de travail, puis renforcement du revenu et des frais professionnels du cabinet, selon les conditions du contrat.</p>
-          </article>
-          <article class="info-card">
-            <span class="case-tag">Dirigeant</span>
-            <h3>Structuration après cession</h3>
-            <p>Après la vente de son entreprise, accompagnement dans la structuration d'un capital important et la préparation de la transmission familiale.</p>
-          </article>
-          <article class="info-card">
-            <span class="case-tag">Association</span>
-            <h3>Gestion de trésorerie</h3>
-            <p>Sécurisation d'une trésorerie excédentaire et mise en place d'un reporting clair pour le bureau, dans un cadre adapté au monde associatif.</p>
-          </article>
-        </div>
-        <p class="section-note">Exemples d'accompagnement anonymisés, présentés à titre illustratif.</p>
+        <p class="section-note">Témoignages illustratifs — bientôt remplacés par nos avis Google vérifiés.</p>
       </div>
     </section>
 
@@ -1018,7 +1068,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="assets/js/main.js?v=15"></script>
+  <script src="assets/js/main.js?v=16"></script>
 
   <!-- Carrousel du hero : slide 1 = vidéo (bascule à la fin), slide 2 = même durée que la vidéo -->
   <script>

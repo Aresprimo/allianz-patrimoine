@@ -433,6 +433,45 @@
   document.querySelectorAll("[data-slider]").forEach(initSlider);
 
   /* ---------------------------------------------------------------
+     8 bis. Témoignages "reel" (2 colonnes, fondu) — [data-treel]
+     Un seul témoignage visible ; flèches + autoplay (pause au survol).
+     NOTE : les slides seront remplacés par les avis Google (à brancher).
+  --------------------------------------------------------------- */
+  const initTreel = (root) => {
+    const slides = Array.from(root.querySelectorAll(".treel-slide"));
+    if (slides.length < 2) return;
+
+    const autoplayMs = parseInt(root.dataset.autoplay || "0", 10);
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let index = slides.findIndex((s) => s.classList.contains("is-active"));
+    if (index < 0) index = 0;
+    let timer = null;
+
+    const show = (n) => {
+      index = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle("is-active", k === index));
+    };
+
+    // Autoplay (désactivé si reduced-motion)
+    const canAuto = autoplayMs > 0 && !reduced;
+    const start = () => { if (canAuto && !timer) timer = setInterval(() => show(index + 1), autoplayMs); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    const restart = () => { stop(); start(); };
+
+    root.querySelector(".treel-next")?.addEventListener("click", () => { show(index + 1); restart(); });
+    root.querySelector(".treel-prev")?.addEventListener("click", () => { show(index - 1); restart(); });
+
+    // Pause au survol / focus clavier (lecture confortable)
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+    root.addEventListener("focusin", stop);
+    root.addEventListener("focusout", start);
+
+    start();
+  };
+  document.querySelectorAll("[data-treel]").forEach(initTreel);
+
+  /* ---------------------------------------------------------------
      9. Ancres : si Lenis est actif, on gère le scroll fluide vers l'ancre
   --------------------------------------------------------------- */
   if (lenis) {
