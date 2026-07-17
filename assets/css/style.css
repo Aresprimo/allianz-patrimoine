@@ -1365,6 +1365,49 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
 .compare-table td:last-child { background: rgba(184,139,119,0.07); color: var(--gris-titre); font-weight: 500; }
 .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: none; }
 
+/* ===== Actualités / blog ===== */
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.blog-card {
+  display: flex; flex-direction: column;
+  background: var(--blanc); border: 1px solid var(--filet); border-radius: 18px;
+  overflow: hidden; box-shadow: 0 1px 2px rgba(42,46,44,.04), 0 14px 32px -24px rgba(42,46,44,.32);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.blog-card:hover { transform: translateY(-6px); box-shadow: 0 2px 6px rgba(42,46,44,.05), 0 28px 52px -26px rgba(42,46,44,.4); border-color: rgba(184,139,119,.5); }
+.blog-card-media { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--beige); }
+.blog-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.blog-card:hover .blog-card-media img { transform: scale(1.05); }
+.blog-card-ph { width: 100%; height: 100%; display: grid; place-items: center; color: var(--or); opacity: .5; }
+.blog-card-ph svg { width: 46px; height: 46px; }
+.blog-card-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+.blog-date { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--or-texte); font-weight: 600; }
+.blog-card-title { font-size: 1.2rem; line-height: 1.25; margin: .5rem 0 .6rem; }
+.blog-card-title a { color: var(--gris-titre); }
+.blog-card-title a:hover { color: var(--or-texte); }
+.blog-card-body p { color: var(--gris-corps); font-size: .95rem; margin: 0 0 1rem; }
+.blog-more { margin-top: auto; font-weight: 600; color: var(--or-texte); font-size: .92rem; }
+.blog-more:hover { text-decoration: underline; }
+@media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+/* Article */
+.blog-article { max-width: 760px; margin: 0 auto; }
+.blog-article .section-title { margin: .3rem 0 .8rem; }
+.blog-meta { color: var(--gris-corps); font-size: .9rem; margin: 0 0 1.8rem; }
+.blog-hero { margin: 0 0 2rem; border-radius: var(--r-l); overflow: hidden; box-shadow: var(--ombre-douce); }
+.blog-hero img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+.blog-prose { color: var(--gris-corps); font-size: 1.05rem; line-height: 1.75; }
+.blog-prose h2 { color: var(--gris-titre); font-family: var(--font-titre); font-size: 1.5rem; margin: 2rem 0 .8rem; }
+.blog-prose h3 { color: var(--gris-titre); font-size: 1.2rem; margin: 1.6rem 0 .5rem; }
+.blog-prose p { margin: 0 0 1.1rem; }
+.blog-prose ul { list-style: disc; padding-left: 1.4rem; margin: 0 0 1.2rem; }
+.blog-prose li { margin-bottom: .4rem; }
+.blog-prose a { color: var(--or-texte); font-weight: 600; }
+.blog-prose a:hover { text-decoration: underline; }
+.blog-prose blockquote { border-left: 3px solid var(--or); padding-left: 1.2rem; margin: 1.4rem 0; font-style: italic; color: var(--gris-titre); }
+.blog-prose strong { color: var(--gris-titre); }
+.blog-back { margin-top: 2.4rem; }
+
 /* ===== Focus prévoyance (home) : titre héro + bénéfices + vitrines partenaires ===== */
 .prev-head { max-width: 980px; margin-bottom: clamp(2rem, 4vw, 3rem); }
 .prev-title { font-size: clamp(2.2rem, 4.6vw, 3.6rem); max-width: 24ch; }

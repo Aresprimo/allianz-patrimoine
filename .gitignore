@@ -1,1 +1,11 @@
 todo.md
+
+# --- Mini-CMS Actualités (PHP) : destiné à o2switch, PAS à GitHub Pages ---
+# (GitHub Pages n'exécute pas PHP et exposerait le code source)
+/admin/
+/lib/
+/content/
+actualites.php
+actualite.php
+assets/uploads/
+.throttle.json
